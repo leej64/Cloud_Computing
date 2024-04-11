@@ -22,8 +22,7 @@ function App() {
     .map((song) => {
       const [titleLine, artistLine, thumbnailLine] = song.trim().split('Artist:');
       const title = titleLine.replace('Title:', '').trim();
-      const artist = artistLine.replace('Thumbnail:', '').trim();
-      const thumbnail = thumbnailLine ? thumbnailLine.trim() : '';
+      const [artist, thumbnail] = artistLine.split('Thumbnail:').map((item) => item.trim());
       return { title, artist, thumbnail };
     });
 

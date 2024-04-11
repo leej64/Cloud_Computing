@@ -6,7 +6,11 @@ const SongList = ({ songs }) => {
     <div className="song-list">
       {songs.map((song, index) => (
         <div key={index} className="song-item">
-          <img src={song.thumbnail} alt={`${song.title} thumbnail`} className="thumbnail" />
+          {song.thumbnail ? (
+            <img src={song.thumbnail} alt={`${song.title} thumbnail`} className="thumbnail" />
+          ) : (
+            <div className="thumbnail-placeholder">No thumbnail available</div>
+          )}
           <div className="song-details">
             <h3 className="song-title">{song.title}</h3>
             <p className="song-artist">{song.artist}</p>
