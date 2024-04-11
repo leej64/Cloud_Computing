@@ -1,7 +1,7 @@
 // App.js
 import logo from './logo.svg';
 import './App.css';
-import SongList from './SongList';
+import SongList from './songlist';
 
 const songData = `
   Title: Like That Artist: Future, Metro Boomin, Kendrick Lamar Thumbnail: https://i.ytimg.com/vi/N9bKBAA22Go/sddefault.jpg?sqp=-oaymwEWCJADEOEBIAQqCghqEJQEGHgg6AJIWg&rs=AMzJL3kc7NbnjgF--SHxclSqOBDN7cThow
