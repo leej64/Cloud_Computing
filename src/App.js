@@ -1,5 +1,4 @@
 // App.js
-import logo from './logo.svg';
 import './App.css';
 import SongList from './songlist';
 
@@ -31,7 +30,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
         <h1>Song List</h1>
         <SongList songs={songs} />
       </header>
