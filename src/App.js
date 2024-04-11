@@ -2,7 +2,7 @@
 import './App.css';
 import SongList from './songlist';
 
-const songData = `
+const ytMusicData = `
   Title: Like That Artist: Future, Metro Boomin, Kendrick Lamar Thumbnail: https://i.ytimg.com/vi/N9bKBAA22Go/sddefault.jpg?sqp=-oaymwEWCJADEOEBIAQqCghqEJQEGHgg6AJIWg&rs=AMzJL3kc7NbnjgF--SHxclSqOBDN7cThow
   Title: Beautiful Things Artist: Benson Boone Thumbnail: https://i.ytimg.com/vi/Oa_RSwwpPaA/sddefault.jpg?sqp=-oaymwEWCJADEOEBIAQqCghqEJQEGHgg6AJIWg&rs=AMzJL3kj7weGvq5NImArbJVbVuJPyh8z1A
   Title: Get It Sexyy Artist: Sexyy Red Thumbnail: https://lh3.googleusercontent.com/miU2jmXe9cVDOlwRma7aGOFp1YnfJm38m46GY_3Heevq6uhvY3r5XRZGcjrnmDLfXUeXgE9RF1K0qpCB=w120-h120-l90-rj
@@ -15,8 +15,62 @@ const songData = `
   Title: JOLENE Artist: Beyoncé Thumbnail: https://i.ytimg.com/vi/x9XHMK3nWr4/sddefault.jpg?sqp=-oaymwEWCJADEOEBIAQqCghqEJQEGHgg6AJIWg&rs=AMzJL3nI8XQzqskRciJgSBXpqHAgK9Hkqw
 `;
 
+const spotifyData = [
+  {
+		"title": "Too Sweet",
+		"artist": "Hozier",
+		"thumbnail": null
+	},
+	{
+		"title": "Like That",
+		"artist": "Future, Metro Boomin",
+		"thumbnail": null
+	},
+	{
+		"title": "i like the way you kiss me",
+		"artist": "Artemas",
+		"thumbnail": null
+	},
+	{
+		"title": "CARNIVAL",
+		"artist": "\u00a5$, Kanye West, Ty Dolla $ign",
+		"thumbnail": null
+	},
+	{
+		"title": "Beautiful Things",
+		"artist": "Benson Boone",
+		"thumbnail": null
+	},
+	{
+		"title": "End of Beginning",
+		"artist": "Djo",
+		"thumbnail": null
+	},
+	{
+		"title": "Type Shit",
+		"artist": "Future, Metro Boomin",
+		"thumbnail": null
+	},
+	{
+		"title": "we can't be friends (wait for your love)",
+		"artist": "Ariana Grande",
+		"thumbnail": null
+	},
+	{
+		"title": "I Remember Everything (feat. Kacey Musgraves)",
+		"artist": "Zach Bryan",
+		"thumbnail": null
+	},
+	{
+		"title": "Stick Season",
+		"artist": "Noah Kahan",
+		"thumbnail": null
+	}
+];
+
+
 function App() {
-  const songs = songData
+  const ytMusicSongs = ytMusicData
     .trim()
     .split('\n')
     .map((song) => {
@@ -33,11 +87,11 @@ function App() {
         <div className="song-list-container">
           <div className="song-list-column">
             <h2>Spotify</h2>
-            <SongList songs={songs} />
+            <SongList songs={spotifyData} />
           </div>
           <div className="song-list-column">
             <h2>YT Music</h2>
-            <SongList songs={songs} />
+            <SongList songs={ytMusicSongs} />
           </div>
         </div>
       </header>
