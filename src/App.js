@@ -1,7 +1,7 @@
 // App.js
 import logo from './logo.svg';
 import './App.css';
-import SongList from './songlist';
+import SongList from './SongList';
 
 const songData = `
   Title: Like That Artist: Future, Metro Boomin, Kendrick Lamar Thumbnail: https://i.ytimg.com/vi/N9bKBAA22Go/sddefault.jpg?sqp=-oaymwEWCJADEOEBIAQqCghqEJQEGHgg6AJIWg&rs=AMzJL3kc7NbnjgF--SHxclSqOBDN7cThow
@@ -24,7 +24,7 @@ function App() {
       const [titleLine, artistLine, thumbnailLine] = song.trim().split('Artist:');
       const title = titleLine.replace('Title:', '').trim();
       const artist = artistLine.replace('Thumbnail:', '').trim();
-      const thumbnail = thumbnailLine.trim();
+      const thumbnail = thumbnailLine ? thumbnailLine.trim() : '';
       return { title, artist, thumbnail };
     });
 
