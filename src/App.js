@@ -30,7 +30,16 @@ function App() {
     <div className="App">
       <header className="App-header">
         <h1>Song List</h1>
-        <SongList songs={songs} />
+        <div className="song-list-container">
+          <div className="song-list-column">
+            <h2>Spotify</h2>
+            <SongList songs={songs} />
+          </div>
+          <div className="song-list-column">
+            <h2>YT Music</h2>
+            <SongList songs={songs} />
+          </div>
+        </div>
       </header>
     </div>
   );
