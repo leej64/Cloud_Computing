@@ -66,7 +66,7 @@ function App() {
             <SongList songs={spotifyData} />
           </div>
           <div className="song-list-column">
-            <h2>YT Music</h2>
+            <h2>YouTube Music</h2>
             <iframe
               width="100%"
               height="352"
