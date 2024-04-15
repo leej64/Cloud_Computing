@@ -77,7 +77,7 @@ function App() {
               allowFullScreen
               referrerPolicy="strict-origin-when-cross-origin"
             ></iframe>
-            <h3>Top 10 on YT</h3>
+            <h3>Top 10 on YouTube</h3>
             <SongList songs={ytMusicData} />
           </div>
         </div>
