@@ -1,52 +1,56 @@
-[
-	{
+{
+	"_id": "c3b70a40fe80005d8cc1e32426000c1d",
+	"_rev": "1-3d433da6387031cfdea24a3e3cdbfd5b",
+	"tracks": [
+	  {
 		"title": "Too Sweet",
 		"artist": "Hozier",
-		"thumbnail": null
-	},
-	{
+		"thumbnail": "https://i.scdn.co/image/ab67616d0000b2732e8b4358d044b75807e30bf0"
+	  },
+	  {
 		"title": "Like That",
 		"artist": "Future, Metro Boomin",
-		"thumbnail": null
-	},
-	{
+		"thumbnail": "https://i.scdn.co/image/ab67616d0000b273a46b07c291e6dfdee13b3ee8"
+	  },
+	  {
 		"title": "i like the way you kiss me",
 		"artist": "Artemas",
-		"thumbnail": null
-	},
-	{
+		"thumbnail": "https://i.scdn.co/image/ab67616d0000b273e67611dbbf69a90d0b6cb738"
+	  },
+	  {
 		"title": "CARNIVAL",
-		"artist": "\u00a5$, Kanye West, Ty Dolla $ign",
-		"thumbnail": null
-	},
-	{
+		"artist": "¥$, Kanye West, Ty Dolla $ign",
+		"thumbnail": "https://i.scdn.co/image/ab67616d0000b2730a31b4026a452ae8c3f97a76"
+	  },
+	  {
 		"title": "Beautiful Things",
 		"artist": "Benson Boone",
-		"thumbnail": null
-	},
-	{
-		"title": "End of Beginning",
-		"artist": "Djo",
-		"thumbnail": null
-	},
-	{
-		"title": "Type Shit",
-		"artist": "Future, Metro Boomin",
-		"thumbnail": null
-	},
-	{
-		"title": "we can't be friends (wait for your love)",
-		"artist": "Ariana Grande",
-		"thumbnail": null
-	},
-	{
-		"title": "I Remember Everything (feat. Kacey Musgraves)",
-		"artist": "Zach Bryan",
-		"thumbnail": null
-	},
-	{
+		"thumbnail": "https://i.scdn.co/image/ab67616d0000b273cc04ff3e70e146ba9abacf40"
+	  },
+	  {
 		"title": "Stick Season",
 		"artist": "Noah Kahan",
-		"thumbnail": null
-	}
-]
+		"thumbnail": "https://i.scdn.co/image/ab67616d0000b2736ee35072df1af802cca09918"
+	  },
+	  {
+		"title": "Espresso",
+		"artist": "Sabrina Carpenter",
+		"thumbnail": "https://i.scdn.co/image/ab67616d0000b273659cd4673230913b3918e0d5"
+	  },
+	  {
+		"title": "I Remember Everything (feat. Kacey Musgraves)",
+		"artist": "Zach Bryan",
+		"thumbnail": "https://i.scdn.co/image/ab67616d0000b273e5a25ed08d1e7e0fbb440cef"
+	  },
+	  {
+		"title": "End of Beginning",
+		"artist": "Djo",
+		"thumbnail": "https://i.scdn.co/image/ab67616d0000b273fddfffec51b4580acae727c1"
+	  },
+	  {
+		"title": "Type Shit",
+		"artist": "Future, Metro Boomin",
+		"thumbnail": "https://i.scdn.co/image/ab67616d0000b273a46b07c291e6dfdee13b3ee8"
+	  }
+	]
+  }
