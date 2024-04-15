@@ -80,23 +80,43 @@ function App() {
       return { title, artist, thumbnail };
     });
 
-  return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Song List</h1>
-        <div className="song-list-container">
-          <div className="song-list-column">
-            <h2>Spotify</h2>
-            <SongList songs={spotifyData} />
-          </div>
-          <div className="song-list-column">
-            <h2>YT Music</h2>
-            <SongList songs={ytMusicSongs} />
-          </div>
-        </div>
-      </header>
-    </div>
-  );
-}
-
+	return (
+		<div className="App">
+		  <header className="App-header">
+			<h1>Song List</h1>
+			<div className="song-list-container">
+			  <div className="song-list-column">
+				<h2>Spotify</h2>
+				<iframe
+				  style={{ borderRadius: '12px' }}
+				  src="https://open.spotify.com/embed/playlist/37i9dQZEVXbLp5XoPON0wI?utm_source=generator&theme=0"
+				  width="100%"
+				  height="352"
+				  frameBorder="0"
+				  allowFullScreen=""
+				  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+				  loading="lazy"
+				></iframe>
+				<SongList songs={spotifyData} />
+			  </div>
+			  <div className="song-list-column">
+				<h2>YT Music</h2>
+				<iframe
+				  width="100%"
+				  height="352"
+				  src="https://www.youtube.com/embed/videoseries?list=PL4fGSI1pDJn6O1LS0XSdF3RyO0Rq_LDeI"
+				  title="YouTube video player"
+				  frameBorder="0"
+				  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				  allowFullScreen
+				  referrerPolicy="strict-origin-when-cross-origin"
+				></iframe>
+				<SongList songs={ytMusicSongs} />
+			  </div>
+			</div>
+		  </header>
+		</div>
+	  );
+	}
+		
 export default App;
