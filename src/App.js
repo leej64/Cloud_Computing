@@ -97,6 +97,7 @@ function App() {
 				  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
 				  loading="lazy"
 				></iframe>
+				<h3>Top 10 on Spotify</h3>
 				<SongList songs={spotifyData} />
 			  </div>
 			  <div className="song-list-column">
@@ -111,6 +112,7 @@ function App() {
 				  allowFullScreen
 				  referrerPolicy="strict-origin-when-cross-origin"
 				></iframe>
+				<h3>Top 10 on YT</h3>
 				<SongList songs={ytMusicSongs} />
 			  </div>
 			</div>
