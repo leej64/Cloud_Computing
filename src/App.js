@@ -57,10 +57,11 @@ function App() {
         <nav className="toolbar">
           <ul>
             <li>
-              <Link to="/" className="toolbar-link">Home</Link>
+            <Link to="/description" className="toolbar-link">Welcome!</Link>
+              
             </li>
             <li>
-              <Link to="/description" className="toolbar-link">Description</Link>
+            <Link to="/" className="toolbar-link">Top Lists</Link>
             </li>
           </ul>
         </nav>
