@@ -68,7 +68,7 @@ def main():
     #couchdb
     user = "admin"
     password = "group6"
-    couchserver = couchdb.Server("http://%s:%s@34.230.59.163:5984/" %(user, password))
+    couchserver = couchdb.Server("http://%s:%s@54.152.198.46:5984/" %(user, password))
     
     def bind_db(dbname):
         if dbname in couchserver:

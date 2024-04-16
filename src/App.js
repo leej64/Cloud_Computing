@@ -15,7 +15,7 @@ function App() {
   const fetchData = async () => {
 	try {
 	  // Fetch the most recent YouTube document from CouchDB
-	  const youtubeResponse = await axios.get('http://184.73.109.41:5984/youtube/_all_docs?include_docs=true&descending=true&limit=1', {
+	  const youtubeResponse = await axios.get('http://54.152.198.46:5984/youtube/_all_docs?include_docs=true&descending=true&limit=1', {
 		auth: {
 		  username: 'admin',
 		  password: 'group6'
@@ -29,7 +29,7 @@ function App() {
 	  setYtMusicData(youtubeData);
   
 	  // Fetch the most recent Spotify document from CouchDB
-	  const spotifyResponse = await axios.get('http://184.73.109.41:5984/spotify/_all_docs?include_docs=true&descending=true&limit=1', {
+	  const spotifyResponse = await axios.get('http://54.152.198.46:5984/spotify/_all_docs?include_docs=true&descending=true&limit=1', {
 		auth: {
 		  username: 'admin',
 		  password: 'group6'
