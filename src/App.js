@@ -5,6 +5,7 @@ import axios from 'axios';
 import './App.css';
 import SongList from './songlist';
 import DescriptionPage from './DescriptionPage';
+import PreferenceTestPage from './PreferenceTestPage';
 
 
 function App() {
@@ -113,18 +114,19 @@ function App() {
       console.error('Error fetching data:', error);
     }
   };
-
   return (
     <Router>
       <div className="App">
         <nav className="toolbar">
           <ul>
             <li>
-            <Link to="/" className="toolbar-link">Top Lists</Link>
-              
+              <Link to="/" className="toolbar-link">Top Lists</Link>
             </li>
             <li>
-            <Link to="/description" className="toolbar-link">Comparison</Link> 
+              <Link to="/description" className="toolbar-link">Comparison</Link>
+            </li>
+            <li>
+              <Link to="/preference-test" className="toolbar-link">Preference Test</Link>
             </li>
           </ul>
         </nav>
@@ -150,6 +152,7 @@ function App() {
             </header>
           } />
           <Route path="/description" element={<DescriptionPage ytMusicData={ytMusicData} spotifyData={spotifyData} youtube50Data={youtube50Data} spotify50Data={spotify50Data} />} />
+          <Route path="/preference-test" element={<PreferenceTestPage youtube50Data={youtube50Data} spotify50Data={spotify50Data} />} />
         </Routes>
       </div>
     </Router>
