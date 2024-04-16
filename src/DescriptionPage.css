@@ -1,0 +1,21 @@
+/* DescriptionPage.css */
+.description-page {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .description-page h1 {
+    margin-bottom: 20px;
+  }
+  
+  .description-page p {
+    margin-bottom: 10px;
+  }

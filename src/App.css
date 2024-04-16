@@ -89,3 +89,31 @@
 .song-list-column h2 {
   margin-bottom: 15px;
 }
+
+.toolbar {
+  background-color: #282c34;
+  padding: 10px;
+  border: 2px solid white;
+}
+
+.toolbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.toolbar li {
+  margin: 0 10px;
+}
+
+.toolbar-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.toolbar-link:hover {
+  text-decoration: underline;
+}
