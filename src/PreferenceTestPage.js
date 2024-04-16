@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import { findBestMatch } from 'string-similarity';
 import './PreferenceTestPage.css';
+import spotifyLogo from './spotify-logo.png'; // Import the Spotify logo image
+import youtubeLogo from './youtube-logo.jpeg'; // Import the YouTube Music logo image
 
 function PreferenceTestPage({ youtube50Data, spotify50Data }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -38,11 +40,29 @@ function PreferenceTestPage({ youtube50Data, spotify50Data }) {
     const spotifyCount = selectedPlatform.filter(platform => platform === 'Spotify').length;
 
     if (youtubeCount > spotifyCount) {
-      return 'You are more of a YouTube Music user!';
+      return (
+        <div className="result">
+          <p>You are more of a YouTube Music user!</p>
+          <img src={youtubeLogo} alt="YouTube Music" className="logo" />
+        </div>
+      );
     } else if (spotifyCount > youtubeCount) {
-      return 'You are more of a Spotify user!';
+      return (
+        <div className="result">
+          <p>You are more of a Spotify user!</p>
+          <img src={spotifyLogo} alt="Spotify" className="logo" />
+        </div>
+      );
     } else {
-      return 'You have an equal preference for YouTube Music and Spotify!';
+      return (
+        <div className="result">
+          <p>You have an equal preference for YouTube Music and Spotify!</p>
+          <div className="logo-container">
+            <img src={youtubeLogo} alt="YouTube Music" className="logo" />
+            <img src={spotifyLogo} alt="Spotify" className="logo" />
+          </div>
+        </div>
+      );
     }
   };
 

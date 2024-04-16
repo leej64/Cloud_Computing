@@ -21,19 +21,19 @@
   
   .song-cards {
     display: flex;
-    justify-content: space-between;
-    gap: 30px;
+    justify-content: center;
+    gap: 40px; /* Adjust the gap value to reduce the spacing */
     width: 100%;
     margin-top: 20px;
   }
   
   .song-card-container {
     flex: 1;
-    max-width: 350px;
+    max-width: 300px; /* Adjust the max-width value to make the cards smaller */
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
-    background-color: #c9e6ff;
+    background-color: #f0f0f0;
     color: #282c34;
   }
   
