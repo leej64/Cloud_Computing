@@ -5,15 +5,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     font-size: calc(10px + 2vmin);
     color: white;
     text-align: center;
     padding: 20px;
   }
   
+  .description-page header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+  }
+  
   .description-page h1 {
     margin-bottom: 20px;
+    font-size: 48px;
   }
   
   .description-page p {

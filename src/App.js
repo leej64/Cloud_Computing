@@ -57,7 +57,7 @@ function App() {
         <nav className="toolbar">
           <ul>
             <li>
-            <Link to="/description" className="toolbar-link">Welcome!</Link>
+            <Link to="/description" className="toolbar-link">Welcome</Link>
               
             </li>
             <li>
