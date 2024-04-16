@@ -6,62 +6,125 @@ import './App.css';
 import SongList from './songlist';
 import DescriptionPage from './DescriptionPage';
 
+
 function App() {
   const [ytMusicData, setYtMusicData] = useState([]);
   const [spotifyData, setSpotifyData] = useState([]);
+  const [youtube50Data, setYouTube50Data] = useState([]);
+  const [spotify50Data, setSpotify50Data] = useState([]);
 
   useEffect(() => {
     fetchData();
   }, []);
-  useEffect(() => {
-    fetchData();
-  }, []);
+
+  const fetchYouTubeData = async () => {
+    try {
+      const response = await axios.get('http://54.152.198.46:5984/youtube/_all_docs?include_docs=true&descending=true&limit=1', {
+        auth: {
+          username: 'admin',
+          password: 'group6'
+        }
+      });
+      console.log('YouTube response:', response.data);
+      const doc = response.data.rows[0].doc;
+      console.log('YouTube doc:', doc);
+      const data = doc.tracks;
+      console.log('YouTube data:', data);
+      return data;
+    } catch (error) {
+      console.error('Error fetching YouTube data:', error);
+      return [];
+    }
+  };
+
+  const fetchSpotifyData = async () => {
+    try {
+      const response = await axios.get('http://54.152.198.46:5984/spotify/_all_docs?include_docs=true&descending=true&limit=1', {
+        auth: {
+          username: 'admin',
+          password: 'group6'
+        }
+      });
+      console.log('Spotify response:', response.data);
+      const doc = response.data.rows[0].doc;
+      console.log('Spotify doc:', doc);
+      const data = doc.tracks;
+      console.log('Spotify data:', data);
+      return data;
+    } catch (error) {
+      console.error('Error fetching Spotify data:', error);
+      return [];
+    }
+  };
+
+  const fetchYouTube50Data = async () => {
+    try {
+      const response = await axios.get('http://54.152.198.46:5984/youtube50/_all_docs?include_docs=true&descending=true&limit=1', {
+        auth: {
+          username: 'admin',
+          password: 'group6'
+        }
+      });
+      console.log('YouTube50 response:', response.data);
+      const doc = response.data.rows[0].doc;
+      console.log('YouTube50 doc:', doc);
+      const data = doc.tracks;
+      console.log('YouTube50 data:', data);
+      return data;
+    } catch (error) {
+      console.error('Error fetching YouTube50 data:', error);
+      return [];
+    }
+  };
+
+  const fetchSpotify50Data = async () => {
+    try {
+      const response = await axios.get('http://54.152.198.46:5984/spotify50/_all_docs?include_docs=true&descending=true&limit=1', {
+        auth: {
+          username: 'admin',
+          password: 'group6'
+        }
+      });
+      console.log('Spotify50 response:', response.data);
+      const doc = response.data.rows[0].doc;
+      console.log('Spotify50 doc:', doc);
+      const data = doc.tracks;
+      console.log('Spotify50 data:', data);
+      return data;
+    } catch (error) {
+      console.error('Error fetching Spotify50 data:', error);
+      return [];
+    }
+  };
 
   const fetchData = async () => {
-	try {
-	  // Fetch the most recent YouTube document from CouchDB
-	  const youtubeResponse = await axios.get('http://54.152.198.46:5984/youtube/_all_docs?include_docs=true&descending=true&limit=1', {
-		auth: {
-		  username: 'admin',
-		  password: 'group6'
-		}
-	  });
-	  console.log('YouTube response:', youtubeResponse.data);
-	  const youtubeDoc = youtubeResponse.data.rows[0].doc;
-	  console.log('YouTube doc:', youtubeDoc);
-	  const youtubeData = youtubeDoc.tracks;
-	  console.log('YouTube data:', youtubeData);
-	  setYtMusicData(youtubeData);
-  
-	  // Fetch the most recent Spotify document from CouchDB
-	  const spotifyResponse = await axios.get('http://54.152.198.46:5984/spotify/_all_docs?include_docs=true&descending=true&limit=1', {
-		auth: {
-		  username: 'admin',
-		  password: 'group6'
-		}
-	  });
-	  console.log('Spotify response:', spotifyResponse.data);
-	  const spotifyDoc = spotifyResponse.data.rows[0].doc;
-	  console.log('Spotify doc:', spotifyDoc);
-	  const spotifyData = spotifyDoc.tracks;
-	  console.log('Spotify data:', spotifyData);
-	  setSpotifyData(spotifyData);
-	} catch (error) {
-	  console.error('Error fetching data:', error);
-	}
+    try {
+      const [ytMusicData, spotifyData, youtube50Data, spotify50Data] = await Promise.all([
+        fetchYouTubeData(),
+        fetchSpotifyData(),
+        fetchYouTube50Data(),
+        fetchSpotify50Data()
+      ]);
+      setYtMusicData(ytMusicData);
+      setSpotifyData(spotifyData);
+      setYouTube50Data(youtube50Data);
+      setSpotify50Data(spotify50Data);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+    }
   };
- 
+
   return (
     <Router>
       <div className="App">
         <nav className="toolbar">
           <ul>
             <li>
-            <Link to="/description" className="toolbar-link">Welcome</Link>
+            <Link to="/" className="toolbar-link">Top Lists</Link>
               
             </li>
             <li>
-            <Link to="/" className="toolbar-link">Top Lists</Link>
+            <Link to="/description" className="toolbar-link">Comparison</Link> 
             </li>
           </ul>
         </nav>
@@ -86,7 +149,7 @@ function App() {
               </div>
             </header>
           } />
-          <Route path="/description" element={<DescriptionPage />} />
+          <Route path="/description" element={<DescriptionPage ytMusicData={ytMusicData} spotifyData={spotifyData} youtube50Data={youtube50Data} spotify50Data={spotify50Data} />} />
         </Routes>
       </div>
     </Router>
