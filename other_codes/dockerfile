@@ -1,0 +1,12 @@
+# Author: Junwon Lee
+# Vanderbilt University
+#
+# For CS 4287 Project Frontend container
+
+FROM node:18-alpine
+WORKDIR /Group6_cloud_computing/
+COPY public/ /Group6_cloud_computing/public
+COPY src/ /Group6_cloud_computing/src
+COPY package.json /Group6_cloud_computing/
+RUN npm install
+CMD ["npm", "start"]
