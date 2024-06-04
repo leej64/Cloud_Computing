@@ -1,5 +1,4 @@
 # Playlist Consolidation Between Music Streaming Services
-An iOS app that helps members of the Vanderbilt Climbing Club organize rides to and from biweekly practices.
 
 # Description
 <p>This project is a playlist consolidation between music streaming services with cloud computing technologies.<br>
