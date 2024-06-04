@@ -12,3 +12,5 @@ The developers for this project are:
 * Junwon Lee: [junwon.lee@vanderbilt.edu](mailto:junwon.lee@vanderbilt.edu)
 * James Rogers: [james.rogers@vanderbilt.edu](mailto:james.rogers@vanderbilt.edu)
 * Michael Wang: [michael.y.wang@vanderbilt.edu](mailto:michael.y.wang@vanderbilt.edu)
+
+![Alt text](/poster/poster.jpg?raw=true "Playlist Consolidation Between Music Streaming Services")
